@@ -33,7 +33,7 @@ const SERVICES_COL_1: NavItem[] = [
 ];
 
 const SERVICES_COL_2: NavItem[] = [
-  { label: "Trademark Renewals", href: "/services/renewals" },
+  { label: "Trademark Renewals", href: "/services/trademark-renewals" },
   { label: "Trademark Revival", href: "/services/revival" },
   { label: "Trademark Office Action", href: "/services/office-action" },
   { label: "Trademark Statement of Use", href: "/services/statement-of-use" },
@@ -49,7 +49,7 @@ const SERVICES_COL_3: NavItem[] = [
 
 const RESOURCES: IconNavItem[] = [
   { label: "Blog", href: "/resources/blog", Icon: BookText },
-  { label: "Why Legal Mark Experts", href: "/resources/why-us", Icon: Layers },
+  { label: "About Us", href: "/resources/about", Icon: Layers },
   { label: "Trademark FAQ’s", href: "/resources/faqs", Icon: HelpCircle },
   { label: "Trademark Categories", href: "/resources/categories", Icon: Newspaper },
 ];

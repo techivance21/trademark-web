@@ -24,3 +24,63 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-timeline-grow {
+  transform-origin: left;
+  animation-name: timelineGrow;
+  animation-fill-mode: forwards;
+}
+
+.animate-callout {
+  animation: calloutPop 360ms ease-out forwards;
+}
+
+.animate-fade-scale {
+  animation: fadeScale 360ms ease-out;
+}
+
+.animate-fade-up {
+  animation: fadeUp 360ms ease-out;
+}
+
+@keyframes timelineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes calloutPop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
