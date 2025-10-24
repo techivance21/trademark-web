@@ -17,33 +17,39 @@ type Benefit = {
 
 const BENEFITS: Benefit[] = [
   {
-    title: "Stop copycats",
-    description: "Deter competitors from profiting off your reputation with lookalike branding.",
+    title: "Stop Copycats Before They Profit",
+    description:
+      "Trademark registration gives you the legal tools to prevent competitors from using similar names, logos, or branding that could confuse customers or dilute your reputation.",
     Icon: ShieldAlert,
   },
   {
-    title: "Stand out",
-    description: "Create a brand as unique as you, knowing a registration preserves it.",
+    title: "Stand Out in a Crowded Market",
+    description:
+      "A registered trademark helps you build a brand identity that's truly your own, and protects it. It ensures your name, slogan, or design remains uniquely tied to your business.",
     Icon: Sparkles,
   },
   {
-    title: "Own your brand",
-    description: "Secure exclusive rights to your names, slogans, and logos in every market you serve.",
+    title: "Own Your Brand, Legally",
+    description:
+      "Secure exclusive rights to your trademarks nationwide. With federal registration, you gain priority protection in every U.S. market where you do business.",
     Icon: Crown,
   },
   {
-    title: "Make it legal",
-    description: "Give your business the (R) badge of legitimacy and build trust with customers.",
+    title: "Add Legitimacy With \u00AE Status",
+    description:
+      "The \u00AE symbol isn't just a badge, it's a statement. It signals to customers and competitors that your brand is officially recognized and protected under U.S. law.",
     Icon: BadgeCheck,
   },
   {
-    title: "Enforce your rights",
-    description: "Gain the backing you need to legally claim your distinct brand identity.",
+    title: "Enforce Your Rights with Confidence",
+    description:
+      "Trademark registration gives you the legal standing to take action against infringers, including cease-and-desist letters, takedown notices, and formal legal claims if needed.",
     Icon: ShieldCheck,
   },
   {
-    title: "Defend what's yours",
-    description: "Act quickly against infringers with ongoing alerts and clear documentation.",
+    title: "Monitor and Defend What's Yours",
+    description:
+      "With active monitoring and proper USPTO documentation, you'll be able to detect and respond to infringement quickly, before it threatens your brand's value or trust.",
     Icon: Search,
   },
 ];
@@ -54,10 +60,10 @@ export default function WhyRegistrationMatters() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-[var(--font-heading)]">
-            Why trademark registration is important
+            Why Trademark Registration Matters
           </h2>
           <p className="mt-4 text-base text-[#d9ddff] sm:text-lg font-[var(--font-body)]">
-            Lock in your advantage with protections that help your brand thrive long term.
+            Protect your brand, reputation, and future with a registered trademark.
           </p>
         </div>
 

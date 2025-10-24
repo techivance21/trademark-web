@@ -63,12 +63,12 @@ export default function SiteFooter() {
         <div className="flex flex-1 flex-wrap gap-10 text-sm leading-6">
           <FooterColumn title="Services" links={SERVICES} />
           <FooterColumn title="Resources" links={RESOURCES} />
-          <FooterColumn title="Company" links={COMPANY} />
           <div className="min-w-[180px] space-y-4">
-            <h3 className="text-sm uppercase tracking-wide text-[#6c4cb1] font-[var(--font-heading)]">
-              Connect With Us
-            </h3>
+            <FooterColumn title="Company" links={COMPANY} />
             <div className="space-y-2">
+              <h3 className="text-sm uppercase tracking-wide text-[#6c4cb1] font-[var(--font-heading)]">
+                Contact Us
+              </h3>
               <Link href="/contact" className="block text-sm text-[#4b4b63] transition hover:text-[#6c4cb1]">
                 Contact Us
               </Link>
@@ -76,6 +76,9 @@ export default function SiteFooter() {
                 Blog
               </Link>
             </div>
+            <h3 className="text-sm uppercase tracking-wide text-[#6c4cb1] font-[var(--font-heading)] pt-2">
+              Social Links
+            </h3>
             <div className="mt-4 flex items-center gap-4 text-[#6c7295]">
               <SocialIcon href="https://www.linkedin.com" label="LinkedIn">
                 <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h3.96V21H3zm7.65 0H14.5v1.63h.05c.48-.9 1.66-1.85 3.42-1.85 3.65 0 4.32 2.4 4.32 5.5V21h-3.96v-5.31c0-1.27-.02-2.89-1.76-2.89-1.76 0-2.03 1.37-2.03 2.79V21H10.6z" />
@@ -109,10 +112,11 @@ export default function SiteFooter() {
           </div>
 
           <div className="space-y-3 text-right">
-            <div className="flex justify-end gap-3">
-              <Badge>VISA</Badge>
-              <Badge>Mastercard</Badge>
-              <Badge>Discover</Badge>
+            <div className="flex flex-wrap items-center justify-end gap-4 sm:gap-6">
+              <PaymentIcon brand="visa" label="Visa" />
+              <PaymentIcon brand="mastercard" label="Mastercard" />
+              <PaymentIcon brand="paypal" label="PayPal" />
+              <PaymentIcon brand="discover" label="Discover" />
             </div>
             <p className="text-xs text-[#6c7295]">
               &copy; {new Date().getFullYear()} Legal Mark Experts, LLC. All rights reserved.
@@ -161,10 +165,26 @@ function SocialIcon({
   );
 }
 
-function Badge({ children }: { children: React.ReactNode }) {
+type PaymentBrand = "visa" | "mastercard" | "paypal" | "discover";
+
+function PaymentIcon({ brand, label }: { brand: PaymentBrand; label: string }) {
+  const sources: Record<PaymentBrand, string> = {
+    visa: "/visa.png",
+    mastercard: "/mastercard.png",
+    paypal: "/paypal.png",
+    discover: "/discover.png",
+  };
   return (
-    <span className="inline-flex h-6 items-center rounded-full border border-[#e0e3ff] bg-white px-3 text-xs text-[#1b1b3a]">
-      {children}
+    <span className="flex items-center" role="img" aria-label={label}>
+      <span className="sr-only">{label}</span>
+      <Image
+        src={sources[brand]}
+        alt={label}
+        width={80}
+        height={28}
+        className="h-6 w-auto object-contain sm:h-7"
+        priority={false}
+      />
     </span>
   );
 }

@@ -10,21 +10,21 @@ type Step = {
 
 const STEPS: Step[] = [
   {
-    title: "Answer a Few Questions",
+    title: "Complete a Brief Questionnaire",
     description:
-      "Complete a quick online questionnaire so our trademark team can tailor the filing process to your brand goals.",
+      "Tell us about your business and brand through our secure online form. This helps our trademark team customize the filing process to match your goals and industry.",
     Icon: Search,
   },
   {
-    title: "Compile Application and Search",
+    title: "Search & Application Preparation",
     description:
-      "Legal experts review your details, run comprehensive searches, and prepare your application for a smooth submission.",
+      "Our experienced case analysts and paralegals conduct a comprehensive trademark search and professionally prepare your application to ensure accuracy and compliance with USPTO standards.",
     Icon: MessageCircle,
   },
   {
-    title: "Application Filing",
+    title: "File with the USPTO",
     description:
-      "We submit your application to the USPTO and keep you updated until your brand protection is secured.",
+      "We file your application directly with the United States Patent and Trademark Office (USPTO). Your trademark will appear in the official USPTO database within 24 hours, and we'll keep you informed every step of the way.",
     Icon: ThumbsUp,
   },
 ];
@@ -38,7 +38,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="mt-3 text-base text-[#4b4b63] sm:text-lg font-[var(--font-body)]">
-            Register your trademark in three easy steps with our guided online experience.
+            Register your trademark in just three simple steps with our streamlined, expert-guided online process.
           </p>
         </div>
 

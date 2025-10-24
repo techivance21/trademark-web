@@ -9,9 +9,7 @@ import {
   ChevronDown,
   ChevronRight,
   BookText,
-  HelpCircle,
   Layers,
-  Newspaper,
   ShieldCheck,
   FileText,
 } from "lucide-react";
@@ -28,35 +26,33 @@ type IconNavItem = {
 const SERVICES_COL_1: NavItem[] = [
   { label: "Trademark Registration", href: "/services/trademark-registration" },
   { label: "Free Trademark Search", href: "/services/free-trademark-search" },
-  { label: "Comprehensive Trademark Search", href: "/services/comprehensive-search" },
-  { label: "Trademark Consultancy", href: "/services/consultancy" },
+  { label: "Comprehensive Trademark Search", href: "/services/comprehensive-trademark-search" },
+  { label: "Trademark Consultancy", href: "/services/trademark-consultancy" },
 ];
 
 const SERVICES_COL_2: NavItem[] = [
   { label: "Trademark Renewals", href: "/services/trademark-renewals" },
-  { label: "Trademark Revival", href: "/services/revival" },
-  { label: "Trademark Office Action", href: "/services/office-action" },
-  { label: "Trademark Statement of Use", href: "/services/statement-of-use" },
-  { label: "Trademark Extension of Use", href: "/services/extension-of-use" },
+  { label: "Trademark Revival", href: "/services/trademark-revival" },
+  { label: "Trademark Office Action", href: "/services/trademark-office-action" },
+  { label: "Trademark Statement of Use", href: "/services/trademark-statement-of-use" },
+  { label: "Trademark Extension of Use", href: "/services/trademark-extension-of-use" },
 ];
 
 const SERVICES_COL_3: NavItem[] = [
-  { label: "Trademark Monitoring", href: "/services/monitoring" },
+  { label: "Trademark Monitoring", href: "/services/trademark-monitoring" },
   { label: "Cease and Desist", href: "/services/cease-and-desist" },
-  { label: "Trademark Ownership Transfer", href: "/services/ownership-transfer" },
-  { label: "Trademark Litigations", href: "/services/litigations" },
+  { label: "Trademark Ownership Transfer", href: "/services/trademark-ownership-transfer" },
+  { label: "Trademark Litigations", href: "/services/trademark-litigations" },
 ];
 
 const RESOURCES: IconNavItem[] = [
   { label: "Blog", href: "/resources/blog", Icon: BookText },
   { label: "About Us", href: "/resources/about", Icon: Layers },
-  { label: "Trademark FAQ’s", href: "/resources/faqs", Icon: HelpCircle },
-  { label: "Trademark Categories", href: "/resources/categories", Icon: Newspaper },
 ];
 
 const COMPANY: IconNavItem[] = [
-  { label: "Privacy Policy", href: "/company/privacy", Icon: ShieldCheck },
-  { label: "Terms and Conditions", href: "/company/terms", Icon: FileText },
+  { label: "Privacy Policy", href: "/company/privacy-policy", Icon: ShieldCheck },
+  { label: "Terms and Conditions", href: "/company/terms-and-conditions", Icon: FileText },
 ];
 
 function cx(...classes: Array<string | false | undefined>) {
@@ -115,14 +111,28 @@ export default function Navbar() {
         scrolled ? "shadow-sm" : ""
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4">
+      <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2" aria-label="Homepage">
-          <Image src="/logo.png" alt="Brand logo" width={90} height={80} />
+          <Image
+            src="/logo.png"
+            alt="Brand logo"
+            width={140}
+            height={120}
+            className="h-16 w-auto sm:h-20"
+            priority
+          />
         </Link>
 
-        {/* Desktop menu (≥1200px) */}
-        <div className="hidden min-[1200px]:flex items-center gap-1">
+        {/* Desktop menu (>=1200px) */}
+        <div className="hidden min-[1200px]:flex items-center gap-2">
+          <Link
+            href="/"
+            className="px-3 py-2 text-sm text-[#333] hover:text-black transition font-[var(--font-heading)]"
+          >
+            Home
+          </Link>
+
           <TopLink
             label="Services"
             open={openMenu === "services"}
@@ -151,12 +161,18 @@ export default function Navbar() {
             items={COMPANY}
           />
 
-          {/* CTA: Contact Us (primary) */}
           <Link
             href="/contact"
-            className="ml-2 rounded-full bg-[#6c4cb1] px-4 py-2 text-sm text-white hover:opacity-90 transition font-[var(--font-heading)]"
+            className="px-3 py-2 text-sm text-[#333] hover:text-black transition font-[var(--font-heading)]"
           >
             Contact Us
+          </Link>
+
+          <Link
+            href="/trademark-registration-form"
+            className="ml-2 rounded-full bg-[#6c4cb1] px-4 py-2 text-sm text-white shadow-sm transition hover:opacity-90 font-[var(--font-heading)]"
+          >
+            Apply for Registration
           </Link>
         </div>
 
@@ -192,8 +208,14 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
       >
-        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
-          <Image src="/logo.png" alt="Brand logo" width={80} height={70} />
+        <div className="flex items-center justify-between h-20 px-4 border-b border-gray-200">
+          <Image
+            src="/logo.png"
+            alt="Brand logo"
+            width={120}
+            height={100}
+            className="h-14 w-auto"
+          />
           <button
             onClick={() => setMobileOpen(false)}
             className="p-2 text-[#333] hover:text-black transition"
@@ -204,6 +226,14 @@ export default function Navbar() {
         </div>
 
         <div className="p-4 space-y-3">
+          <Link
+            href="/"
+            onClick={() => setMobileOpen(false)}
+            className="block rounded-md px-3 py-2 text-[#333] hover:text-black hover:bg-gray-50 transition font-[var(--font-heading)]"
+          >
+            Home
+          </Link>
+
           <Accordion title="Services">
             <MobileSection title="Register your trademark" items={SERVICES_COL_1} onClose={() => setMobileOpen(false)} />
             <MobileSection title="Post filing services" items={SERVICES_COL_2} onClose={() => setMobileOpen(false)} />
@@ -218,13 +248,20 @@ export default function Navbar() {
             <MobileList items={COMPANY} onClose={() => setMobileOpen(false)} />
           </Accordion>
 
-          {/* CTA: Contact Us */}
           <Link
             href="/contact"
             onClick={() => setMobileOpen(false)}
-            className="block text-center rounded-full bg-[#6c4cb1] px-4 py-2 text-white hover:opacity-90 font-[var(--font-heading)]"
+            className="block rounded-md px-3 py-2 text-[#333] hover:text-black hover:bg-gray-50 transition font-[var(--font-heading)]"
           >
             Contact Us
+          </Link>
+
+          <Link
+            href="/trademark-registration-form"
+            onClick={() => setMobileOpen(false)}
+            className="block text-center rounded-full bg-[#6c4cb1] px-4 py-2 text-white shadow-sm transition hover:opacity-90 font-[var(--font-heading)]"
+          >
+            Apply for Registration
           </Link>
         </div>
       </aside>
@@ -274,10 +311,21 @@ function TopLink({
 
 function MegaMenu() {
   return (
-    <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-3">
-      <MenuColumn title="Register your trademark" items={SERVICES_COL_1} />
-      <MenuColumn title="Post filing services" items={SERVICES_COL_2} />
-      <MenuColumn title="Trademark protection" items={SERVICES_COL_3} />
+    <div className="overflow-hidden rounded-xl bg-white">
+      <div className="flex items-center justify-center gap-4 border-b border-[#e5e1f7] bg-[#f4f1ff] px-6 py-4">
+        <Image src="/logo.png" alt="Legal Mark Experts" width={56} height={56} className="h-10 w-auto" />
+        <div className="flex items-baseline gap-3 text-[#2f2474]">
+          <span className="text-sm font-medium uppercase tracking-[0.24em] text-[#7b71c4] whitespace-nowrap">
+            Protect your brand with
+          </span>
+          <span className="text-xl font-semibold whitespace-nowrap">Legal Mark Experts</span>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 gap-6 px-6 py-6 sm:grid-cols-3">
+        <MenuColumn title="Register your trademark" items={SERVICES_COL_1} />
+        <MenuColumn title="Post filing services" items={SERVICES_COL_2} />
+        <MenuColumn title="Trademark protection" items={SERVICES_COL_3} />
+      </div>
     </div>
   );
 }
@@ -336,17 +384,18 @@ function Dropdown({
 function MenuColumn({ title, items }: { title: string; items: NavItem[] }) {
   return (
     <div>
-      <h3 className="mb-3 text-xs uppercase tracking-wide text-[#212121] font-[var(--font-heading)]">
+      <h3 className="mb-4 text-xs uppercase tracking-wide text-[#6c4cb1] font-semibold">
         {title}
       </h3>
-      <ul className="space-y-1">
+      <ul className="space-y-2">
         {items.map((i) => (
           <li key={i.href}>
             <Link
               href={i.href}
-              className="block rounded-md px-2 py-2 text-sm text-[#333] hover:text-black hover:bg-gray-50 transition"
+              className="group flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm font-medium text-[#2f2f2f] transition hover:bg-[#f4f1ff] hover:text-[#6c4cb1]"
             >
-              {i.label}
+              <span>{i.label}</span>
+              <ChevronRight className="h-4 w-4 text-[#b5aadf] transition group-hover:translate-x-1 group-hover:text-[#6c4cb1]" />
             </Link>
           </li>
         ))}

@@ -3,13 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import {
-  BadgeCheck,
-  CircleDollarSign,
-  Smile,
-  Stamp,
-  Star,
-} from "lucide-react";
+import { BadgeCheck, CircleDollarSign, Smile, Stamp, Star } from "lucide-react";
 
 type StatItem = {
   label: string;
@@ -128,45 +122,39 @@ export default function HeroSection() {
         <div className="flex-1 space-y-8">
           <div className="space-y-4">
             <h1 className="text-3xl font-semibold leading-tight text-[#1b1b3a] sm:text-4xl lg:text-[2.8rem] lg:leading-[1.15] font-[var(--font-heading)]">
-              Protect Your Brand Globally In 3 Easy Steps!
+              Register Your U.S. Trademark Online Fast, Affordable and Without Any Hassle.
             </h1>
             <p className="max-w-xl text-base text-[#4b4b63] sm:text-lg font-[var(--font-body)]">
-              Affordable, fast &amp; 100% online trademark registration. Partner with Legal Mark Experts and secure your brand without the complexity.
+              Protect your brand across the United States with expert support from senior case analysts and trademark paralegals. Legal Mark Experts makes registration simple in just 3 easy steps, 100% online.
             </p>
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
-              href="/pricing"
+              href="/#pricing"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#6c4cb1] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#6c4cb1]/30 transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6c4cb1]"
             >
               <CircleDollarSign className="h-4 w-4" />
               Check Pricing
             </Link>
-            <div className="flex items-center gap-3">
-              <div className="rounded-xl border border-white/70 bg-white/90 px-4 py-3 shadow-lg shadow-black/5 backdrop-blur">
-                <div className="flex items-center gap-2 text-sm text-[#1b1b3a]">
-                  <Star className="h-4 w-4 text-[#0bbf4f]" />
-                  See our{" "}
-                  <span className="font-semibold text-[#1b1b3a]">26 reviews</span>
-                </div>
-                <div className="mt-1 text-xs text-[#606082]">on Trustpilot</div>
-              </div>
-            </div>
+
+            <span className="hidden text-sm text-[#4b4b63] sm:inline-block">
+              Trusted by 3,000+ founders nationwide
+            </span>
           </div>
 
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/services/free-trademark-search"
+              href="/services/trademark-registration"
               className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#1b1b3a] shadow-md shadow-black/5 transition hover:bg-[#f3f6ff]"
             >
-              Free Trademark Search
+              Explore Our Services
             </Link>
             <Link
-              href="/services/amazon-brand-registry"
+              href="/trademark-registration-form"
               className="inline-flex items-center justify-center rounded-full bg-[#f7a142] px-5 py-2.5 text-sm font-semibold text-[#1b1b3a] shadow-md shadow-[#f7a142]/30 transition hover:brightness-105"
             >
-              Amazon Brand Registry
+              Start Your Trademark Application
             </Link>
           </div>
         </div>

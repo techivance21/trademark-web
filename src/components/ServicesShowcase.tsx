@@ -15,29 +15,29 @@ const SERVICES: ServiceItem[] = [
   {
     title: "Trademark Registration \u2192 USPTO Filings",
     description:
-      "No matter the trademark class, you can take the registration worries off your shoulders. Complete the contents of your application yourself or pursue an attorney-assisted trademark package and watch as your USPTO filing crosses the finish line for registration.",
-    ctaLabel: "Learn More About Trademark Registration",
+      "Secure your brand name, logo, or slogan with confidence through our efficient and affordable U.S. trademark registration services. Submit your information online and our specialists handle preparation, classification, and USPTO filing from start to finish.",
+    ctaLabel: "Explore Trademark Registration Services",
     ctaHref: "/services/trademark-registration",
   },
   {
-    title: "Trademark Documents \u2192 Different Filing Types",
+    title: "Trademark Filings & Legal Documents \u2192 Office Actions, Assignments & More",
     description:
-      "Received an Office Action and unsure what to do next? Interested in completing a Transfer and Assignment or purchasing a Certified Copy? No matter the hurdle, we're here to smooth your journey with our quick and secure online filing process.",
-    ctaLabel: "Learn More About Your Office Action",
+      "Facing a USPTO Office Action or managing a transfer? We prepare and submit responses, Section 8 filings, Statements of Use, Certified Copies, and trademark assignments with precision and on-time delivery.",
+    ctaLabel: "Get Help With USPTO Filings",
     ctaHref: "/services/office-action",
   },
   {
-    title: "Copyright Registration",
+    title: "Trademark Revival \u2192 Reclaim Abandoned Applications",
     description:
-      "You have rights to your work, including books, articles, and websites, when you create it. To strengthen those rights, however, you should officially register your work with the U.S. Copyright Office.",
-    ctaLabel: "Learn more about Copyright Registration",
-    ctaHref: "/services/copyright-registration",
+      "Missed a deadline or received a refusal? We assess why your application went abandoned, prepare the right petition, and guide it back onto the USPTO path so your brand regains legal protection.",
+    ctaLabel: "Revive Your Trademark",
+    ctaHref: "/services/trademark-revival",
   },
   {
     title: "Trademark Monitoring & Maintenance",
     description:
-      "Protect your mark against infringement and trademark dilution with systemic monitoring of all USPTO filings. Enjoy peace of mind as we keep an eye on things for you.",
-    ctaLabel: "Learn More about Trademark Monitoring",
+      "Stay protected after registration with proactive USPTO monitoring and maintenance support. We notify you of conflicting filings and handle renewals, Statements of Use, and ownership updates without the stress.",
+    ctaLabel: "Protect Your Trademark Long-Term",
     ctaHref: "/services/monitoring",
   },
 ];
@@ -55,7 +55,7 @@ export default function ServicesShowcase() {
               Our Services
             </p>
             <h2 className="mt-4 text-3xl text-[#1b1b3a] sm:text-4xl font-[var(--font-heading)]">
-              What can Legal Mark Experts do for you?
+              What Can Legal Mark Experts Do for Your Brand?
             </h2>
 
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

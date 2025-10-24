@@ -3,7 +3,9 @@ import HeroSection from '../components/HeroSection';
 import HowItWorks from '../components/HowItWorks';
 import PricingPlans from '../components/PricingPlan';
 import ServicesShowcase from '../components/ServicesShowcase';
+import Testimonials from '../components/Testimonials';
 import WhyRegistrationMatters from '../components/WhyRegistrationMatters';
+import FAQ from '../components/FAQ';
 
 const page = () => {
   return (
@@ -13,6 +15,8 @@ const page = () => {
       <PricingPlans />
       <ServicesShowcase />
       <WhyRegistrationMatters />
+      <Testimonials />
+      <FAQ />
     </div>
   )
 }
