@@ -1,11 +1,12 @@
 "use client";
 
+import type { LucideIcon } from "lucide-react";
 import { ClipboardCheck, Handshake, HelpCircle, ShieldCheck } from "lucide-react";
 
 type Benefit = {
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   accent: "primary" | "secondary";
 };
 
