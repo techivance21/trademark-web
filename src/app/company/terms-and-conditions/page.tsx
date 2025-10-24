@@ -10,7 +10,6 @@ import {
   Handshake,
   Landmark,
   Layers,
-  LifeBuoy,
   MonitorCheck,
   PenTool,
   Shield,
@@ -507,4 +506,3 @@ function AgreementSection({
     </section>
   );
 }
-

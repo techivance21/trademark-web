@@ -82,7 +82,7 @@ export default function PricingPlans() {
             Start Protecting Your Business Today
           </h2>
           <p className="mt-4 text-base text-[#d5dbff] sm:text-lg font-[var(--font-body)]">
-            Select the trademark registration package that matches your brand's needs. Our experienced trademark specialists and case analysts will guide you through every step with speed, accuracy, and confidence.
+            Select the trademark registration package that matches your brand&apos;s needs. Our experienced trademark specialists and case analysts will guide you through every step with speed, accuracy, and confidence.
           </p>
         </div>
 

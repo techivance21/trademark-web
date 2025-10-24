@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
             Your Privacy, Protected with Purpose
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-            Secure Mark USA ("Legal Mark Expert," "we," "our," or "us") delivers trademark registration, legal filing,
+            Secure Mark USA (&quot;Legal Mark Expert,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) delivers trademark registration, legal filing,
             and brand protection solutions for individuals and businesses throughout the United States. We are resolute in
             protecting the personal and confidential information entrusted to us. This policy explains the data we collect,
             how we use it, and the safeguards we maintain in accordance with applicable privacy laws.
@@ -193,7 +193,7 @@ export default function PrivacyPolicyPage() {
 
       <Section id="introduction" title="Introduction">
         <p>
-          Secure Mark USA ("Legal Mark Expert," "we," "our," or "us") provides trademark registration services, legal
+          Secure Mark USA (&quot;Legal Mark Expert,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) provides trademark registration services, legal
           document filing, and brand protection solutions for individuals and businesses in the United States. We
           understand the importance of safeguarding personal and confidential information. This Privacy Policy explains
           how we collect, use, and disclose personal data in accordance with applicable laws and regulations.
@@ -218,7 +218,7 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-5">
           <p>
             We will not share your opt-in to an SMS campaign with any third party for purposes unrelated to providing you
-            with that campaign's services. We may share your personal data, including your SMS opt-in or consent status,
+            with that campaign&apos;s services. We may share your personal data, including your SMS opt-in or consent status,
             with trusted third parties that help us deliver messaging services such as platform providers, phone companies,
             or vendors assisting with text message delivery.
           </p>
@@ -342,7 +342,7 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-4">
           <p>You always have control over your messaging preferences:</p>
           <ol className="grid gap-4 list-decimal pl-5 sm:grid-cols-2 sm:pl-6 [&>li]:rounded-2xl [&>li]:border [&>li]:border-[#e1dcf6] [&>li]:bg-white [&>li]:p-5 [&>li]:text-sm [&>li]:leading-relaxed [&>li]:shadow-sm">
-            <li>Reply to any text message from Legal Mark Expert with "STOP" or "UNSUBSCRIBE".</li>
+            <li>Reply to any text message from Legal Mark Expert with &quot;STOP&quot; or &quot;UNSUBSCRIBE&quot;.</li>
             <li>Send a text to (845) 660-0206 with the same keywords at any time.</li>
           </ol>
           <p className="text-sm text-[#4b4b63]">

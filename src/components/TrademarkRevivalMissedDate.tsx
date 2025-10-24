@@ -14,7 +14,7 @@ const PATHS: RevivalPath[] = [
   {
     title: "Eligible for Revival",
     description:
-      "Your trademark might be abandoned, but it isn’t too late. File a complete response plus a Petition to Revive within the two-month grace period.",
+      "Your trademark might be abandoned, but it is not too late. File a complete response plus a Petition to Revive within the two-month grace period.",
     ctaLabel: "Revive Your Trademark",
     href: "/trademark-revival/status",
   },
@@ -42,7 +42,7 @@ export default function TrademarkRevivalMissedDate({
             Missed Your Revival Date?
           </h2>
           <p className="mt-3 text-2xl font-semibold text-[#212121] sm:text-3xl font-[var(--font-heading)]">
-            Don't worry! We've got you covered
+            No worries! We have you covered
           </p>
         </div>
 
